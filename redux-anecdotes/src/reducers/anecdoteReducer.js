@@ -33,9 +33,8 @@ export const voteAnecdote = (id) => {
   }
 }
 
-const reducer = (state = initialState, action) => {
-  console.log('state now: ', state)
-  console.log('action', action)
+const anecdoteReducer = (state = initialState, action) => {
+
   switch (action.type) {
     case 'VOTE':
       const id = action.data.id
@@ -53,4 +52,4 @@ const reducer = (state = initialState, action) => {
   return state
 }
 
-export default reducer
+export default anecdoteReducer
